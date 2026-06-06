@@ -16,7 +16,7 @@ Wireless Card	BCM943602CS
 Feature	Status	Dependency	Remarks
 Non-Fuctional
 	✅		Completely normal
-完全正常
+
 Video and Audio 
 
 Feature	Status	Dependency	Remarks
