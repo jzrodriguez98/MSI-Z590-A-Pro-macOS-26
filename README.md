@@ -58,7 +58,7 @@ USB： USB2.0 x1 USB3.0 x1 USBinjectAll.kext to temporarily enable USB to set up
 
 USB kexts:
 
-USBToolBox or USBMap.kext
+Use USBToolBox (Windows preferably) or USBMap.kext to generate your USB mapping
 
 XHCI-unsupported.kext
 
