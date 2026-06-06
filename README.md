@@ -17,7 +17,7 @@ Discrete Graphics:	AMD RX 6600
 
 Wireless Card: 	BCM943602CS using AppleBCMWLANCompanion.kext
 
-
+SMBIOS: Use MacPro 7,1
 
 Feature	Status	Dependency	Remarks
 Non-Fuctional
@@ -39,18 +39,22 @@ Audio Playback after through 3.5mm
 Automatic Headphone Output Switching
 ✅	VoodooHDA.kext	
 
-Power, Charge, Sleep and Hibernation
+Use SSDTTime to create your custom SSDTs
 
-Feature	Status	Dependency	Remarks
+Power, Charge, Sleep and Hibernation:
+
 CPU Power Management (SpeedShift)
-CPU	✅	SSDT-PLUG	Use MacPro 7,1
+
+CPU	✅	SSDT-PLUG	or Use SSDTTime to create your custom SSDT Plug kext
+
 S3 Sleep / Hibernation Mode 3
+
 S3  / Mode 3 	✅		
 
 Input & Output
 
 USB
-USB： USB2.0 x1 USB3.0 x1 USBinjectAll.kext，Readme https://github.com/daliansky/OS-X-USB-Inject-All
+USB： USB2.0 x1 USB3.0 x1 USBinjectAll.kext to temporarily enable USB to set up，Readme https://github.com/daliansky/OS-X-USB-Inject-All
 
 USB kexts:
 
