@@ -9,7 +9,7 @@ Computer Model: MSI Z590-A PRO
 
 CPU	Intel Core i9-10900K
 
-Memory	DDR4 2666 Mhz. 64 GB
+Memory:	DDR4 3600 Mhz. 64 GB Corsair CMK32GX4M2D3600C18 
 
 NVMe SSD	Crucial P3 PCIe Gen3 NVMe 500GB – CT500P3SSD8
 
