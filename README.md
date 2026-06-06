@@ -11,9 +11,7 @@ NVMe SSD	Crucial P3 PCIe Gen3 NVMe 500GB – CT500P3SSD8
 Discrete Graphics	AMD RX 6600
 Wireless Card	BCM943602CS
 
-Working & Not Working / 可用与不可用的功能
 
-Non-Fuctional / 不工作
 
 Feature	Status	Dependency	Remarks
 Non-Fuctional
