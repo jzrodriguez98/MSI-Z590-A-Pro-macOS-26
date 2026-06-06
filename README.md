@@ -100,7 +100,7 @@ ProperTree to edit plist files on Windows/macOS.
 
 MaciASL for patching ACPI tables and editing ACPI patches.
 
-HackinTool for diagnosis ONLY. Most of the built-in patches are outdated.
+HackinTool for diagnosis ONLY. 
 
 Patience and time, especially if this is your first time Hackintosh-ing. 
 
