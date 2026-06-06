@@ -13,7 +13,7 @@ Memory:	DDR4 3600 Mhz. 64 GB Corsair CMK32GX4M2D3600C18
 
 NVMe SSD	Crucial P3 PCIe Gen3 NVMe 500GB – CT500P3SSD8
 
-Discrete Graphics:	AMD RX 6600
+Discrete Graphics:	AMD RX 6600 Armor 8 GB
 
 Wireless Card: 	BCM943602CS using AppleBCMWLANCompanion.kext
 
