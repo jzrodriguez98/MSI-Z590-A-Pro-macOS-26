@@ -3,7 +3,7 @@ MSI Z590-A Pro macOS 26 Configuration
 
 Hardware Specifications
 
-Specifications	Details
+Specifications and 	Details
 Computer Model	MSI Z590-A PRO
 CPU	Intel Core i9-10900K
 Memory	DDR4 2666 Mhz. 64 GB
@@ -21,13 +21,18 @@ Video and Audio
 
 Feature	Status	Dependency	Remarks
 Full Graphics Accleration (QE/CI)
-	✅	No kext needed if using MacPro 7,1 SMBIOS
+
+✅	No kext needed if using MacPro 7,1 SMBIOS
+
 Audio Recording via 3.5mm microphone
-	✅	VoodooHDA.kext	
+✅	VoodooHDA.kext	
+
 Audio Playback after through 3.5mm
-	✅	VoodooHDA.kext	
+✅	VoodooHDA.kext	
+
 Automatic Headphone Output Switching
-	✅	VoodooHDA.kext	
+✅	VoodooHDA.kext	
+
 Power, Charge, Sleep and Hibernation
 
 Feature	Status	Dependency	Remarks
@@ -35,6 +40,7 @@ CPU Power Management (SpeedShift)
 CPU	✅	SSDT-PLUG	Use MacPro 7,1
 S3 Sleep / Hibernation Mode 3
 S3  / Mode 3 	✅		
+
 Input & Output
 
 USB
@@ -45,15 +51,23 @@ USB kexts:
 XHCI-unsupported.kext
 
 X99，8086:8d31
-200，8086:a2af（macOS）
+
+200，8086:a2af（macOS)
+
 300 XHC，8086:a36d 8086:9ded
+
 400 XHC，8086:a3af
+
 500 XHC，8086:43ed
+
 Display and Keyboard
 
 Feature	Status	Dependency	Remarks
+
 HiDPI	✅		Natively enabled on UHD DP screen external
+
 UHD DP 4K
+
 Reference
 
 dortania's OpenCore Install Guide
@@ -65,12 +79,19 @@ Requirement
 Basic
 
 A macOS machine (optional): to create the macOS installer and build the EFI. 
+
 Flash drive, 16GB or more, for the above purpose. 
+
 PlistEDPlus to edit plist files on Windows.
+
 ProperTree to edit plist files on Windows/macOS.
+
 MaciASL for patching ACPI tables and editing ACPI patches.
+
 HackinTool for diagnosis ONLY. Most of the built-in patches are outdated.
+
 Patience and time, especially if this is your first time Hackintosh-ing. 
+
 Hardware Modification
 
 SSD
