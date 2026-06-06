@@ -4,12 +4,18 @@ MSI Z590-A Pro macOS 26 Configuration
 Hardware Specifications
 
 Specifications and 	Details
-Computer Model	MSI Z590-A PRO
+
+Computer Model: MSI Z590-A PRO
+
 CPU	Intel Core i9-10900K
+
 Memory	DDR4 2666 Mhz. 64 GB
+
 NVMe SSD	Crucial P3 PCIe Gen3 NVMe 500GB – CT500P3SSD8
-Discrete Graphics	AMD RX 6600
-Wireless Card	BCM943602CS
+
+Discrete Graphics:	AMD RX 6600
+
+Wireless Card	BCM943602CS using AppleBCMWLanCompanion kext
 
 
 
