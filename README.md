@@ -54,6 +54,8 @@ USB： USB2.0 x1 USB3.0 x1 USBinjectAll.kext，Readme https://github.com/dalians
 
 USB kexts:
 
+USBToolBox or USBMap.kext
+
 XHCI-unsupported.kext
 
 X99，8086:8d31
