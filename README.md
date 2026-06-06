@@ -43,6 +43,7 @@ Use SSDTTime to create your custom SSDTs
 
 Power, Charge, Sleep and Hibernation:
 
+Use CPUFriend kexts for advanced CPU Power Management
 CPU Power Management (SpeedShift)
 
 CPU	✅	SSDT-PLUG	or Use SSDTTime to create your custom SSDT Plug kext
