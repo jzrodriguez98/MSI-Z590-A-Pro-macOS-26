@@ -17,6 +17,8 @@ Discrete Graphics:	AMD RX 6600 Armor 8 GB
 
 Wireless Card: 	BCM943602CS using AppleBCMWLANCompanion.kext
 
+Thunderbolt: THUNDERBOLTM4 8K	Thunderbolt 4 PCIe Expansion Card
+
 SMBIOS: Use MacPro 7,1
 
 Feature,	Status,	Dependency,	Remarks
@@ -55,7 +57,7 @@ S3 Sleep / Hibernation Mode 3
 
 S3  / Mode 3 	✅		
 
-Input & Output
+Input & Output:
 
 USB
 USB： USB2.0 x1 USB3.0 x1 USBinjectAll.kext to temporarily enable USB to set up
@@ -78,7 +80,9 @@ X99，8086:8d31
 
 500 XHC，8086:43ed
 
-Display and Keyboard
+Thunderbolt: To enable Hot Plug use SSDTs created by CaseySJ
+
+Display:
 
 Feature,	Status,	Dependency,	Remarks
 
