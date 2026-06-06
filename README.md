@@ -25,7 +25,7 @@ Non-Fuctional
 
 Video and Audio 
 
-Feature	Status	Dependency	Remarks
+Feature,	Status,	Dependency,	Remarks
 Full Graphics Accleration (QE/CI)
 
 ✅	No kext needed if using MacPro 7,1 SMBIOS
@@ -77,19 +77,21 @@ X99，8086:8d31
 
 Display and Keyboard
 
-Feature	Status	Dependency	Remarks
+Feature,	Status,	Dependency,	Remarks
 
 HiDPI	✅		Natively enabled on UHD DP screen external
 
 UHD DP 4K
 
-Reference
+Reference:
 
 dortania's OpenCore Install Guide
-daliansky/OC-little
-OpenCore 
 
-Requirement
+daliansky/OC-little
+
+Bootloader: OpenCore / Clover latest version
+
+Requirement:
 
 Basic
 
@@ -107,18 +109,18 @@ HackinTool for diagnosis ONLY.
 
 Patience and time, especially if this is your first time Hackintosh-ing. 
 
-Hardware Modification
+Hardware Modification:
 
 SSD
 
 Samusung PM981 is not supported AT ALL. Make sure to switch at least one SSD.
 
-Wireless Card
+Wireless Card:
 
 it is recommended to use Broadcom wireless network card for the best experience (better, refer to the use of the best experience).
 Alternatively, use Intel AX210 with itlwm kext + Heliport with AppleVTD disabled in BIOS
 
-BIOS Settings
+BIOS Settings:
 
 Settings > Advanced > System Agent (SA) Configuration > VT-D: Enabled if using Broadcom wifi+BT card / Disabled if using Intel AX210
 Settings > Advanced > System Agent (SA) Configuration > Above 4G Decoding: Enabled
@@ -128,8 +130,8 @@ Settings > Boot > Secure Boot > OS Type: Other OS
 Settings > Boot > Boot\Boot Configuration > Wait For 'F1' If Error: Disabled
 Win+Mac
 
-Windows
-Reg add HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation /v RealTimeIsUniversal /t REG_DWORD /d 1
+Windows Edits:
 
+Reg add HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation /v RealTimeIsUniversal /t REG_DWORD /d 1
 
 Ctrl + Enter 
