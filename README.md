@@ -7,11 +7,11 @@ Specifications and 	Details
 
 Computer Model: MSI Z590-A PRO
 
-CPU	Intel Core i9-10900K
+CPU:	Intel Core i9-10900K
 
 Memory:	DDR4 3600 Mhz. 64 GB Corsair CMK32GX4M2D3600C18 
 
-NVMe SSD	Crucial P3 PCIe Gen3 NVMe 500GB – CT500P3SSD8
+NVMe SSD: Crucial P3 PCIe Gen3 NVMe 500GB – CT500P3SSD8
 
 Discrete Graphics:	AMD RX 6600 Armor 8 GB
 
@@ -19,13 +19,14 @@ Wireless Card: 	BCM943602CS using AppleBCMWLANCompanion.kext
 
 SMBIOS: Use MacPro 7,1
 
-Feature	Status	Dependency	Remarks
-Non-Fuctional
+Feature,	Status,	Dependency,	Remarks
+
 	✅		Completely normal
 
-Video and Audio 
+Video and Audio:
 
 Feature,	Status,	Dependency,	Remarks
+
 Full Graphics Accleration (QE/CI)
 
 ✅	No kext needed if using MacPro 7,1 SMBIOS
@@ -38,6 +39,8 @@ Audio Playback after through 3.5mm
 
 Automatic Headphone Output Switching
 ✅	VoodooHDA.kext	
+
+ACPI Customizations:
 
 Use SSDTTime to create your custom SSDTs
 
