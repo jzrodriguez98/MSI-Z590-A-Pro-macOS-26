@@ -55,7 +55,9 @@ S3  / Mode 3 	✅
 Input & Output
 
 USB
-USB： USB2.0 x1 USB3.0 x1 USBinjectAll.kext to temporarily enable USB to set up，Readme https://github.com/daliansky/OS-X-USB-Inject-All
+USB： USB2.0 x1 USB3.0 x1 USBinjectAll.kext to temporarily enable USB to set up
+
+Readme https://github.com/daliansky/OS-X-USB-Inject-All
 
 USB kexts:
 
