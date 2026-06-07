@@ -150,6 +150,8 @@ Reg add HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation /v RealTimeIsU
 - [savvamitrofanov](https://github.com/savvamitrofanov)
 - [usr-sse2](https://github.com/usr-sse2)
 - [vit9696](https://github.com/vit9696)
+
+#### Other Credits
 - [Chefkiss](https://github.com/ChefKissInc)
 - [5T33Z0](https://github.com/5T33Z0)
 - [daliansky](https://github.com/daliansky)
