@@ -28,17 +28,18 @@
 
 VoodooHDA Installation
 
-Exclude other Audio kexts
-Set SIP disable kext or just
+- Exclude other Audio kexts
+- Set SIP disable kext or just
 sudo nvram csr-active-config=0xA85
-Reboot
+- Reboot
 sudo cp -R /path_to/VoodooHDA.kext /Library/Extensions/
 sudo cp -R /path_to/VoodooHDA.prefPane /Library/PreferencePanes/
-Wait while the system saids that the kext must be approved
-Go to System Settings and approve the kext.
-Reboot.
+- Wait while the system saids that the kext must be approved
+- Go to System Settings and approve the kext.
+- Reboot.
 
-If VoodooHDA stops loading, try executing the following commands in Terminal:
+- If VoodooHDA stops loading, try executing the following commands in Terminal:
+
 sudo chmod -Rf 755 /L*/E*
 sudo chown -Rf 0:0 /L*/E*
 sudo touch -f /L*/E*
