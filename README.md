@@ -123,7 +123,7 @@ To enable **Hot Plug**, use SSDTs created by CaseySJ (https://www.tonymacx86.com
 - [ProperTree](https://github.com/corpnewt/ProperTree) to edit plist files on Windows/macOS.
 - [MaciASL](https://github.com/acidanthera/MaciASL) for patching ACPI tables and editing ACPI patches.
 - [HackinTool](https://github.com/headkaze/Hackintool) for diagnosis ONLY. Most of the built-in patches are outdated.
-- Patience and time, especially if this is your first time Hackintosh-ing.
+
 
 ---
 
