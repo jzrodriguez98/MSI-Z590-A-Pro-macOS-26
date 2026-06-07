@@ -107,7 +107,7 @@ To enable **Hot Plug**, use SSDTs created by CaseySJ (https://www.tonymacx86.com
 
 | **Kext**                              | **Description**                                | **Link**                                                       |
 |---------------------------------------|------------------------------------------------|-----------------------------------------------------------------|
-| AdvancedMaps.kext                     | Provides enhanced enhancee map functionalities on non Apple Silicon Macs      | [AdvancedMap](https://github.com/notjosh/AdvancedMap)        |
+| AdvancedMap.kext                     | Lilu plugin providing modern maps on non-Apple Silicon hardware      | [AdvancedMap](https://github.com/notjosh/AdvancedMap)        |
 
 ---
 
