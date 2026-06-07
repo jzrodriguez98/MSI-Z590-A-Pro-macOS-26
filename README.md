@@ -109,7 +109,7 @@ To enable **Hot Plug**, use SSDTs created by CaseySJ (https://www.tonymacx86.com
 | AdvancedMap.kext                     | Lilu plugin providing modern maps on non-Apple Silicon hardware      | [AdvancedMap](https://github.com/notjosh/AdvancedMap) |       
 | itlwm.kext                     | Lilu  plugin enabling WiFi functionality for Intel WiFi cards. Use Heliport as WiFi client      | [itlwm](https://github.com/OpenIntelWireless/itlwm) |
 
-| IntelBluetoothFirmware.kext                     | Lilu  plugin enabling WiFi functionality for Intel WiFi cards. Use Heliport as WiFi client      | [IntelBluetoothFirmware](https://github.com/OpenIntelWireless/IntelBluetoothFirmware) |
+| IntelBluetoothFirmware.kext                    | Lilu  plugin enabling WiFi functionality for Intel WiFi cards. Use Heliport as WiFi client      | [IntelBluetoothFirmware](https://github.com/OpenIntelWireless/IntelBluetoothFirmware) |
 
 
 ---
