@@ -113,6 +113,20 @@ To enable **Hot Plug**, use SSDTs created by CaseySJ (https://www.tonymacx86.com
 
 ---
 
+## Requirement
+
+### Basic
+
+- A macOS machine (optional): to create the macOS installer and build the EFI.
+- Flash drive, 16GB or more, for the above purpose.
+- [PlistEDPlus](https://github.com/ic005k/PlistEDPlus) to edit plist files on Windows.
+- [ProperTree](https://github.com/corpnewt/ProperTree) to edit plist files on Windows/macOS.
+- [MaciASL](https://github.com/acidanthera/MaciASL) for patching ACPI tables and editing ACPI patches.
+- [HackinTool](https://github.com/headkaze/Hackintool) for diagnosis ONLY. Most of the built-in patches are outdated.
+- Patience and time, especially if this is your first time Hackintosh-ing.
+
+---
+
 ### BIOS Settings Checklist
 
 1. **System Agent Configuration**:
@@ -164,16 +178,3 @@ Reg add HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation /v RealTimeIsU
   - [r/Hackintosh on Reddit](https://www.reddit.com/r/hackintosh/)
   - Hackintosh Discord servers.
   - InsanelyMac and AppleLife forums.
-
-
-## Requirement
-
-### Basic
-
-- A macOS machine (optional): to create the macOS installer and build the EFI.
-- Flash drive, 16GB or more, for the above purpose.
-- [PlistEDPlus](https://github.com/ic005k/PlistEDPlus) to edit plist files on Windows.
-- [ProperTree](https://github.com/corpnewt/ProperTree) to edit plist files on Windows/macOS.
-- [MaciASL](https://github.com/acidanthera/MaciASL) for patching ACPI tables and editing ACPI patches.
-- [HackinTool](https://github.com/headkaze/Hackintool) for diagnosis ONLY. Most of the built-in patches are outdated.
-- Patience and time, especially if this is your first time Hackintosh-ing.
