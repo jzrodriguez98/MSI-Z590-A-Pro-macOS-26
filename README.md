@@ -169,6 +169,7 @@ Reg add HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation /v RealTimeIsU
 - [Chefkiss](https://github.com/ChefKissInc)
 - [5T33Z0](https://github.com/5T33Z0)
 - [daliansky](https://github.com/daliansky)
+- [scytdtf](https://github.com/scytdtf)
 
 #### Clover Credits
 - Developers: Slice, Kabyl, usr-sse2, jadran, Blackosx, dmazar, STLVNUB, pcj, apianti, JrCs, pene, FrodoKenny, skoczy, ycr.ru, Oscar09, xsmile, SoThOr, rehabman, Download-Fritz, nms42, Sherlocks,[...]
