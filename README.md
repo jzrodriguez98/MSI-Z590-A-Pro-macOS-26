@@ -26,6 +26,29 @@
 | Audio Playback via 3.5mm                       | ✅         | `VoodooHDA.kext`            |                                      |
 | Automatic Headphone Output Switching           | ✅         | `VoodooHDA.kext`            |                                      |
 
+VoodooHDA Installation
+
+Exclude other Audio kexts
+Set SIP disable kext or just
+sudo nvram csr-active-config=0xA85
+Reboot
+sudo cp -R /path_to/VoodooHDA.kext /Library/Extensions/
+sudo cp -R /path_to/VoodooHDA.prefPane /Library/PreferencePanes/
+Wait while the system saids that the kext must be approved
+Go to System Settings and approve the kext.
+Reboot.
+
+If VoodooHDA stops loading, try executing the following commands in Terminal:
+sudo chmod -Rf 755 /L*/E*
+sudo chown -Rf 0:0 /L*/E*
+sudo touch -f /L*/E*
+sudo chmod -Rf 755 /S*/L*/E*
+sudo chown -Rf 0:0 /S*/L*/E*
+sudo touch -f /S*/L*/E*
+sudo kextcache -Boot -U /
+sudo kextutil -v /Library/Extensions/VoodooHDA.kext
+sudo kextload /Library/Extensions/VoodooHDA.kext
+
 #### ACPI Customizations
 
 - Use [`SSDTTime`](https://github.com/corpnewt/SSDTTime) to create your custom SSDTs.
