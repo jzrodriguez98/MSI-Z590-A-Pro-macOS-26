@@ -23,7 +23,7 @@ SMBIOS: Use MacPro 7,1
 
 Feature,	Status,	Dependency,	Remarks
 
-	✅		Completely normal
+	✅ Completely normal
 
 Video and Audio:
 
