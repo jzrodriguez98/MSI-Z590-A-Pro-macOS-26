@@ -165,14 +165,14 @@ Reg add HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation /v RealTimeIsU
 - [usr-sse2](https://github.com/usr-sse2)
 - [vit9696](https://github.com/vit9696)
 
+#### Clover Credits
+- Developers: Slice, with help of Kabyl, usr-sse2, jadran, Blackosx, dmazar, STLVNUB, pcj, apianti, JrCs, pene, FrodoKenny, skoczy, ycr.ru, Oscar09, xsmile, SoThOr, rehabman, Download-Fritz, nms42, Sherlocks, Zenit432, cecekpawon, stinga11, TheRacerMaster, solstice, Micky1979, Needy, joevt, ErmaC, vit9696, ath, savvas, syscl, goodwin_c, clovy, jief_machak, chris1111, vector_sigma, LAbyOne, Florin9doi, YBronst, Hnanoto
+
 #### Other Credits
 - [Chefkiss](https://github.com/ChefKissInc)
 - [5T33Z0](https://github.com/5T33Z0)
 - [daliansky](https://github.com/daliansky)
 - [scytdtf](https://github.com/scytdtf)
-
-#### Clover Credits
-- Developers: Slice, with help of Kabyl, usr-sse2, jadran, Blackosx, dmazar, STLVNUB, pcj, apianti, JrCs, pene, FrodoKenny, skoczy, ycr.ru, Oscar09, xsmile, SoThOr, rehabman, Download-Fritz, nms42, Sherlocks, Zenit432, cecekpawon, stinga11, TheRacerMaster, solstice, Micky1979, Needy, joevt, ErmaC, vit9696, ath, savvas, syscl, goodwin_c, clovy, jief_machak, chris1111, vector_sigma, LAbyOne, Florin9doi, YBronst, Hnanoto
 
 #### Community Acknowledgments
 - **Major Hackintosh Communities**:
