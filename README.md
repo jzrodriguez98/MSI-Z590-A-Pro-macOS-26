@@ -82,7 +82,7 @@ To enable **Hot Plug**, use SSDTs created by CaseySJ (https://www.tonymacx86.com
   - [OpenCore](https://github.com/acidanthera/OpenCorePkg)
   - [Clover](https://github.com/CloverHackyColor/CloverBootloader)
 - **Triple Booting**: Windows 11, macOS 26, and [PearOS NiceC0re 26.4](https://pearos.xyz).
-  - **Bootloader Chain**: Use [rEFInd](https://github.com/RefindPlusRepo/RefindPlus) to chainload Windows and PearOS, and select between OpenCore or Clover, following this [guide])https://chriswayg.gitbook.io/opencore-visual-beginners-guide/advanced-topics/dual-boot-options/create-refind-booter)
+  - **Bootloader Chain**: Use [rEFInd](https://github.com/RefindPlusRepo/RefindPlus) to chainload Windows and PearOS, and select between OpenCore or Clover, following this [guide](https://chriswayg.gitbook.io/opencore-visual-beginners-guide/advanced-topics/dual-boot-options/create-refind-booter)
 
 ---
 
