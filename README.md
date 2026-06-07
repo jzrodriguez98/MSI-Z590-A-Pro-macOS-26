@@ -85,6 +85,30 @@ To enable **Hot Plug**, use SSDTs created by CaseySJ.
 - **Triple Booting**: Windows 11, macOS 26, and [PearOS NiceC0re 26.4](https://pearos.xyz).
   - **Bootloader Chain**: Use `rEFInd` to chainload Windows and PearOS, and select between OpenCore or Clover.
 
+
+---
+
+### BIOS Settings Checklist
+
+1. **System Agent Configuration**:
+   - VT-D: Enable for Broadcom WiFi/BT; Disable for Intel AX210.
+   - Above 4G Decoding: Enable.
+2. **USB**: Enable XHCI Hand-off.
+3. **Boot Settings**:
+   - Compatibility Support Module (CSM): Disabled.
+   - Secure Boot: OS Type: **Other OS**.
+   - Wait for 'F1' If Error: Disabled.
+
+---
+
+### Dual Boot: Windows Edits
+
+Add the following registry entry to Windows 11 to fix clock disruptions:
+
+```bash
+Reg add HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation /v RealTimeIsUniversal /t REG_DWORD /d 1
+```
+
 ---
 
 ### Credits
@@ -110,26 +134,3 @@ To enable **Hot Plug**, use SSDTs created by CaseySJ.
   - [r/Hackintosh on Reddit](https://www.reddit.com/r/hackintosh/)
   - Hackintosh Discord servers.
   - InsanelyMac and AppleLife forums.
-
----
-
-### BIOS Settings Checklist
-
-1. **System Agent Configuration**:
-   - VT-D: Enable for Broadcom WiFi/BT; Disable for Intel AX210.
-   - Above 4G Decoding: Enable.
-2. **USB**: Enable XHCI Hand-off.
-3. **Boot Settings**:
-   - Compatibility Support Module (CSM): Disabled.
-   - Secure Boot: OS Type: **Other OS**.
-   - Wait for 'F1' If Error: Disabled.
-
----
-
-### Dual Boot: Windows Edits
-
-Add the following registry entry to Windows 11 to fix clock disruptions:
-
-```bash
-Reg add HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation /v RealTimeIsUniversal /t REG_DWORD /d 1
-```
