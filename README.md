@@ -73,6 +73,8 @@ To enable **Hot Plug**, use SSDTs created by CaseySJ (https://www.tonymacx86.com
 - [Dortania OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/)
 - [Daliansky's OC-little Repository](https://github.com/daliansky/OC-little)
 - [OC-little Translated](https://github.com/5T33Z0/OC-Little-Translated)
+- [Clover Guide]
+(https://github.com/5T33Z0/Clover-Crate)
 
 ---
 
