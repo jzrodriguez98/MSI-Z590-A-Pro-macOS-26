@@ -23,7 +23,7 @@ SMBIOS: Use MacPro 7,1
 
 Feature,	Status,	Dependency,	Remarks
 
-	✅ Completely normal
+✅ Completely normal
 
 Video and Audio:
 
@@ -96,7 +96,7 @@ dortania's OpenCore Install Guide
 
 daliansky/OC-little
 
-Bootloader: OpenCore / Clover latest version
+Bootloader: OpenCore / Clover latest version. Triple Booting Windows 11, macOS 26 and pearOS NiceC0re 26.4. Using rEFInd chainload to boot Windows and pearOS and select from OpenCore or Clover
 
 Requirement:
 
