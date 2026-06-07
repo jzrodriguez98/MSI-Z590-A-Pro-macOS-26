@@ -11,7 +11,7 @@
 | **Memory**            | DDR4 3600 MHz, 64 GB Corsair CMK32GX4M2D3600C18                                               |
 | **NVMe SSD**          | [Crucial P3 PCIe Gen3 NVMe 500GB – CT500P3SSD8](https://www.crucial.com/products/ssd/p3)      |
 | **Discrete Graphics** | AMD RX 6600 Armor 8 GB                                                                        |
-| **Wireless Card**     | BCM943602CS (using [`AppleBCMWLANCompanion.kext`](https://github.com/acidanthera/AppleSupport))|
+| **Wireless Card**     | BCM943602CS (using [`AppleBCMWLANCompanion.kext`](https://github.com/0xFireWolf/AppleBCMWLANCompanion))|
 | **Thunderbolt**       | THUNDERBOLTM4 8K (Thunderbolt 4 PCIe Expansion Card)                                          |
 | **SMBIOS**            | Use MacPro 7,1                                                                                |
 
@@ -30,7 +30,7 @@
 
 #### ACPI Customizations
 
-- Use **SSDTTime** to create your custom SSDTs.
+- Use [`SSDTTime`](https://github.com/corpnewt/SSDTTime) to create your custom SSDTs.
 
 ---
 
