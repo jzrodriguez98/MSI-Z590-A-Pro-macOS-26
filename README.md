@@ -11,7 +11,7 @@
 | **Memory**            | DDR4 3600 MHz, 64 GB Corsair CMK32GX4M2D3600C18                                               |
 | **NVMe SSD**          | [Crucial P3 PCIe Gen3 NVMe 500GB – CT500P3SSD8](https://www.crucial.com/products/ssd/p3)      |
 | **Discrete Graphics** | AMD RX 6600 Armor 8 GB                                                                        |
-| **Wireless Card**     | BCM943602CS (using `AppleBCMWLANCompanion.kext`)                                              |
+| **Wireless Card**     | BCM943602CS (using [`AppleBCMWLANCompanion.kext`](https://github.com/acidanthera/AppleSupport))|
 | **Thunderbolt**       | THUNDERBOLTM4 8K (Thunderbolt 4 PCIe Expansion Card)                                          |
 | **SMBIOS**            | Use MacPro 7,1                                                                                |
 
@@ -79,8 +79,10 @@ To enable **Hot Plug**, use SSDTs created by CaseySJ.
 
 ### Bootloader
 
-- **Bootloader**: OpenCore / Clover (Latest Versions)
-- **Triple Booting**: Windows 11, macOS 26, and PearOS NiceC0re 26.4.
+- **Bootloader**:
+  - [OpenCore](https://github.com/acidanthera/OpenCorePkg)
+  - [Clover](https://github.com/CloverHackyColor/CloverBootloader)
+- **Triple Booting**: Windows 11, macOS 26, and [PearOS NiceC0re 26.4](https://pearos.xyz).
   - **Bootloader Chain**: Use `rEFInd` to chainload Windows and PearOS, and select between OpenCore or Clover.
 
 ---
@@ -102,7 +104,7 @@ To enable **Hot Plug**, use SSDTs created by CaseySJ.
 
 - **SSD**: Avoid Samsung PM981 (unsupported).
 - **Wireless Card**:
-  - Best: Broadcom Wireless Card BCM943602CS using AppleBCMWLANCompanion.kext
+  - Best: Broadcom Wireless Card BCM943602CS using `AppleBCMWLANCompanion.kext`
   - Alternative: Intel AX210 + `itlwm.kext` + `Heliport` (Disable **AppleVTD** in BIOS).
   
 ---
