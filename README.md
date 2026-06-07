@@ -102,7 +102,7 @@ To enable **Hot Plug**, use SSDTs created by CaseySJ.
 
 - **SSD**: Avoid Samsung PM981 (unsupported).
 - **Wireless Card**:
-  - Best: Broadcom Wireless Card.
+  - Best: Broadcom Wireless Card BCM943602CS using AppleBCMWLANCompanion.kext
   - Alternative: Intel AX210 + `itlwm.kext` + `Heliport` (Disable **AppleVTD** in BIOS).
   
 ---
