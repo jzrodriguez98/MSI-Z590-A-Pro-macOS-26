@@ -106,8 +106,8 @@ To enable **Hot Plug**, use SSDTs created by CaseySJ (https://www.tonymacx86.com
 
 | **Kext**                              | **Description**                                | **Link**                                                       |
 |---------------------------------------|------------------------------------------------|-----------------------------------------------------------------|
-| AdvancedMap.kext                     | Lilu plugin providing modern maps on non-Apple Silicon hardware      | [AdvancedMap](https://github.com/notjosh/AdvancedMap)        |
-
+| AdvancedMap.kext                     | Lilu plugin providing modern maps on non-Apple Silicon hardware      | [AdvancedMap](https://github.com/notjosh/AdvancedMap)        | itlwm.                     | 
+https://github.com/OpenIntelWireless/itlwm
 ---
 
 ### BIOS Settings Checklist
