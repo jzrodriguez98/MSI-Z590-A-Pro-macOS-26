@@ -82,7 +82,7 @@ To enable **Hot Plug**, use SSDTs created by CaseySJ (https://www.tonymacx86.com
   - [OpenCore](https://github.com/acidanthera/OpenCorePkg)
   - [Clover](https://github.com/CloverHackyColor/CloverBootloader)
 - **Triple Booting**: Windows 11, macOS 26, and [PearOS NiceC0re 26.4](https://pearos.xyz).
-  - **Bootloader Chain**: Use [rEFInd](https://github.com/RefindPlusRepo/RefindPlus) to chainload Windows and PearOS, and select between OpenCore or Clover, following this [guide](https://chriswayg.gitbook.io/opencore-visual-beginners-guide/advanced-topics/dual-boot-options/create-refind-booter) and this [guide](https://mifmif.mydns.jp/alpha/?p=1125)
+  - **Bootloader Chain**: Use [rEFInd](https://github.com/RefindPlusRepo/RefindPlus) to chainload Windows and PearOS, and select between OpenCore or Clover, following this [guide](https://chrisway[...]
 
 ---
 
@@ -108,7 +108,7 @@ To enable **Hot Plug**, use SSDTs created by CaseySJ (https://www.tonymacx86.com
 |---------------------------------------|------------------------------------------------|-----------------------------------------------------------------|
 | AdvancedMap.kext                     | Lilu plugin providing modern maps on non-Apple Silicon hardware      | [AdvancedMap](https://github.com/notjosh/AdvancedMap) |       
 | itlwm.kext                     | Lilu  plugin enabling WiFi functionality for Intel WiFi cards. Use Heliport as WiFi client      | [itlwm](https://github.com/OpenIntelWireless/itlwm) |       
-| IntelBluetoothFirmware.kext                     | Lilu  plugin enabling WiFi functionality for Intel WiFi cards. Use Heliport as WiFi client      | [IntelBluetoothFirmware](https://github.com/OpenIntelWireless/IntelBluetoothFirmware) |
+| IntelBluetoothFirmware.kext                     | Lilu  plugin enabling WiFi functionality for Intel WiFi cards. Use Heliport as WiFi client      | [IntelBluetoothFirmware](https://github.com/O[...]
 
 
 ---
@@ -164,3 +164,16 @@ Reg add HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation /v RealTimeIsU
   - [r/Hackintosh on Reddit](https://www.reddit.com/r/hackintosh/)
   - Hackintosh Discord servers.
   - InsanelyMac and AppleLife forums.
+
+
+## Requirement
+
+### Basic
+
+- A macOS machine (optional): to create the macOS installer and build the EFI.
+- Flash drive, 16GB or more, for the above purpose.
+- [PlistEDPlus](https://github.com/ic005k/PlistEDPlus) to edit plist files on Windows.
+- [ProperTree](https://github.com/corpnewt/ProperTree) to edit plist files on Windows/macOS.
+- [MaciASL](https://github.com/acidanthera/MaciASL) for patching ACPI tables and editing ACPI patches.
+- [HackinTool](https://github.com/headkaze/Hackintool) for diagnosis ONLY. Most of the built-in patches are outdated.
+- Patience and time, especially if this is your first time Hackintosh-ing.
