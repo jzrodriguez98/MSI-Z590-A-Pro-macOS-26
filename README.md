@@ -87,26 +87,30 @@ To enable **Hot Plug**, use SSDTs created by CaseySJ.
 
 ---
 
-### Requirements
+### Credits
 
-#### Basic Tools
+#### OpenCore Credits
+- [The HermitCrabs Lab](https://github.com/acidanthera)
+- [al3xtjames](https://github.com/al3xtjames)
+- [Andrey1970AppleLife](https://github.com/Andrey1970AppleLife)
+- [mhaeuser (ex-Download-Fritz)](https://github.com/mhaeuser)
+- [Goldfish64](https://github.com/Goldfish64)
+- [MikeBeaton](https://github.com/MikeBeaton)
+- [nms42](https://github.com/nms42)
+- [PMheart](https://github.com/PMheart)
+- [savvamitrofanov](https://github.com/savvamitrofanov)
+- [usr-sse2](https://github.com/usr-sse2)
+- [vit9696](https://github.com/vit9696)
 
-- macOS machine (optional): To create the macOS installer and build the EFI.
-- Flash drive (16GB+).
-- **Tools for Editing**:
-  - Plist: [PlistEDPlus](https://github.com) (Windows)
-  - Plist: ProperTree [(Windows/macOS)](https://github.com/corpnewt/ProperTree)
-  - ACPI: [MaciASL](https://github.com)
-  - Diagnosis: HackinTool (Diagnostics ONLY).
-- **Time & Patience**
+#### Clover Credits
+- Developers: Slice, Kabyl, usr-sse2, jadran, Blackosx, dmazar, STLVNUB, pcj, apianti, JrCs, pene, FrodoKenny, skoczy, ycr.ru, Oscar09, xsmile, SoThOr, rehabman, Download-Fritz, nms42, Sherlocks, Zenit432, cecekpawon, stinga11, TheRacerMaster, solstice, Micky1979, Needy, joevt, ErmaC, vit9696, ath, savvas, syscl, goodwin_c, clovy, jief_machak, chris1111, vector_sigma, LAbyOne, Florin9doi, YBronst, Hnanoto.
 
-#### Hardware Modifications
+#### Community Acknowledgments
+- **Major Hackintosh Communities**:
+  - [r/Hackintosh on Reddit](https://www.reddit.com/r/hackintosh/)
+  - Hackintosh Discord servers.
+  - InsanelyMac and AppleLife forums.
 
-- **SSD**: Avoid Samsung PM981 (unsupported).
-- **Wireless Card**:
-  - Best: Broadcom Wireless Card BCM943602CS using `AppleBCMWLANCompanion.kext`
-  - Alternative: Intel AX210 + `itlwm.kext` + `Heliport` (Disable **AppleVTD** in BIOS).
-  
 ---
 
 ### BIOS Settings Checklist
