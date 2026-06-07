@@ -85,6 +85,29 @@ To enable **Hot Plug**, use SSDTs created by CaseySJ (https://www.tonymacx86.com
 - **Triple Booting**: Windows 11, macOS 26, and [PearOS NiceC0re 26.4](https://pearos.xyz).
   - **Bootloader Chain**: Use `rEFInd` to chainload Windows and PearOS, and select between OpenCore or Clover.
 
+---
+
+### Mandatory Kexts
+
+| **Kext**                              | **Description**                                | **Link**                                                       |
+|---------------------------------------|------------------------------------------------|-----------------------------------------------------------------|
+| Lilu.kext                             | Kernel extension necessary for macOS support  | [Lilu](https://github.com/acidanthera/Lilu)                   |
+| VirtualSMC.kext                       | Core SMC emulation                            | [VirtualSMC](https://github.com/acidanthera/VirtualSMC)        |
+| SMCProcessor.kext                     | Used for CPU monitoring (Desktop builds)      | [SMCProcessor](https://github.com/acidanthera/VirtualSMC)     |
+| SMCSuperIO.kext                       | Used for SuperIO monitoring                   | [SMCSuperIO](https://github.com/acidanthera/VirtualSMC)       |
+| AMDRadeonSensor.kext                  | Enables AMD GPU sensors                       | [AMDRadeonSensor](https://github.com/cheffkissdev/AMDRadeonSensor) |
+| RestrictedEvents.kext                 | Security improvements for macOS              | [RestrictedEvents](https://github.com/acidanthera/RestrictEvents) |
+| NVMeFix.kext                          | Fixes NVMe incompatibility issues in macOS    | [NVMeFix](https://github.com/acidanthera/NVMeFix)             |
+| HibernationFixup.kext                 | Enables hibernation support                   | [HibernationFixup](https://github.com/acidanthera/HibernationFixup) |
+| AppleBCMWLANCompanion.kext            | Broadcom Wireless peripheral support          | [AppleBCMWLAN](https://github.com/0xFireWolf/AppleBCMWLANCompanion) |
+
+---
+
+### Optional Kexts
+
+| **Kext**                              | **Description**                                | **Link**                                                       |
+|---------------------------------------|------------------------------------------------|-----------------------------------------------------------------|
+| AdvancedMaps.kext                     | Provides enhanced mapping functionalities      | [AdvancedMaps](https://github.com/example/AdvancedMaps)        |
 
 ---
 
@@ -127,7 +150,7 @@ Reg add HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation /v RealTimeIsU
 - [vit9696](https://github.com/vit9696)
 
 #### Clover Credits
-- Developers: Slice, Kabyl, usr-sse2, jadran, Blackosx, dmazar, STLVNUB, pcj, apianti, JrCs, pene, FrodoKenny, skoczy, ycr.ru, Oscar09, xsmile, SoThOr, rehabman, Download-Fritz, nms42, Sherlocks, Zenit432, cecekpawon, stinga11, TheRacerMaster, solstice, Micky1979, Needy, joevt, ErmaC, vit9696, ath, savvas, syscl, goodwin_c, clovy, jief_machak, chris1111, vector_sigma, LAbyOne, Florin9doi, YBronst, Hnanoto.
+- Developers: Slice, Kabyl, usr-sse2, jadran, Blackosx, dmazar, STLVNUB, pcj, apianti, JrCs, pene, FrodoKenny, skoczy, ycr.ru, Oscar09, xsmile, SoThOr, rehabman, Download-Fritz, nms42, Sherlocks,[...]
 
 #### Community Acknowledgments
 - **Major Hackintosh Communities**:
