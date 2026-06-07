@@ -58,7 +58,7 @@
 
 #### Thunderbolt
 
-To enable **Hot Plug**, use SSDTs created by CaseySJ.
+To enable **Hot Plug**, use SSDTs created by CaseySJ (https://www.tonymacx86.com/threads/msi-z590-a-pro-thunderbolt-4-add-on-card-hotplug.330187/)
 
 ---
 
