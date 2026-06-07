@@ -1,4 +1,4 @@
-# MSI-Z590-A-Pro-macOS-26
+I'm# MSI-Z590-A-Pro-macOS-26
 
 ## MSI Z590-A Pro macOS 26 Configuration
 
@@ -107,7 +107,7 @@ To enable **Hot Plug**, use SSDTs created by CaseySJ (https://www.tonymacx86.com
 
 | **Kext**                              | **Description**                                | **Link**                                                       |
 |---------------------------------------|------------------------------------------------|-----------------------------------------------------------------|
-| AdvancedMaps.kext                     | Provides enhanced mapping functionalities      | [AdvancedMaps](https://github.com/example/AdvancedMaps)        |
+| AdvancedMaps.kext                     | Provides enhanced enhancee map functionalities on non Apple Silicon Macs      | [AdvancedMap](https://github.com/notjosh/AdvancedMap)        |
 
 ---
 
