@@ -130,14 +130,22 @@ Alternatively, use Intel AX210 with itlwm kext + Heliport with AppleVTD disabled
 BIOS Settings:
 
 Settings > Advanced > System Agent (SA) Configuration > VT-D: Enabled if using Broadcom wifi+BT card / Disabled if using Intel AX210
+
 Settings > Advanced > System Agent (SA) Configuration > Above 4G Decoding: Enabled
+
 Settings > Advanced > USB Configuration > XHCI Hand-off: Enabled
+
 Settings > Boot > CSM(Compatibility Support Module) > Launch CSM: Disabled
+
 Settings > Boot > Secure Boot > OS Type: Other OS
+
 Settings > Boot > Boot\Boot Configuration > Wait For 'F1' If Error: Disabled
+
 Win+Mac
 
 Windows Edits:
+
+To fix clock time disruptions add the following registry entry in Windows 11:
 
 Reg add HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation /v RealTimeIsUniversal /t REG_DWORD /d 1
 
