@@ -1,152 +1,129 @@
 # MSI-Z590-A-Pro-macOS-26
-MSI Z590-A Pro macOS 26 Configuration
 
-Hardware Specifications
+## MSI Z590-A Pro macOS 26 Configuration
 
-Specifications and 	Details
+### Hardware Specifications
 
-Computer Model: MSI Z590-A PRO
+| **Component**         | **Details**                                                                                   |
+|------------------------|-----------------------------------------------------------------------------------------------|
+| **Computer Model**     | MSI Z590-A PRO                                                                               |
+| **CPU**               | Intel Core i9-10900K                                                                          |
+| **Memory**            | DDR4 3600 MHz, 64 GB Corsair CMK32GX4M2D3600C18                                               |
+| **NVMe SSD**          | [Crucial P3 PCIe Gen3 NVMe 500GB – CT500P3SSD8](https://www.crucial.com/products/ssd/p3)      |
+| **Discrete Graphics** | AMD RX 6600 Armor 8 GB                                                                        |
+| **Wireless Card**     | BCM943602CS (using `AppleBCMWLANCompanion.kext`)                                              |
+| **Thunderbolt**       | THUNDERBOLTM4 8K (Thunderbolt 4 PCIe Expansion Card)                                          |
+| **SMBIOS**            | Use MacPro 7,1                                                                                |
 
-CPU:	Intel Core i9-10900K
+---
 
-Memory:	DDR4 3600 Mhz. 64 GB Corsair CMK32GX4M2D3600C18 
+### Feature Overview
 
-NVMe SSD: Crucial P3 PCIe Gen3 NVMe 500GB – CT500P3SSD8
+#### Video and Audio
 
-Discrete Graphics:	AMD RX 6600 Armor 8 GB
+| **Feature**                                    | **Status** | **Dependency**             | **Remarks**                          |
+|------------------------------------------------|------------|-----------------------------|--------------------------------------|
+| Full Graphics Acceleration (QE/CI)             | ✅         | None                        | No kext needed with MacPro 7,1 SMBIOS |
+| Audio Recording via 3.5mm Microphone           | ✅         | `VoodooHDA.kext`            |                                      |
+| Audio Playback via 3.5mm                       | ✅         | `VoodooHDA.kext`            |                                      |
+| Automatic Headphone Output Switching           | ✅         | `VoodooHDA.kext`            |                                      |
 
-Wireless Card: 	BCM943602CS using AppleBCMWLANCompanion.kext
+#### ACPI Customizations
 
-Thunderbolt: THUNDERBOLTM4 8K	Thunderbolt 4 PCIe Expansion Card
+- Use **SSDTTime** to create your custom SSDTs.
 
-SMBIOS: Use MacPro 7,1
+---
 
-Feature,	Status,	Dependency,	Remarks
+#### Power, Charge, Sleep and Hibernation
 
-✅ Completely normal
+| **Feature**                | **Status** | **Dependency**                 | **Remarks**            |
+|----------------------------|------------|---------------------------------|-------------------------|
+| CPU Power Management       | ✅         | `SSDT-PLUG`                    | Or create using SSDTTime |
+| S3 Sleep / Hibernation Mode| ✅         | None                           |                         |
 
-Video and Audio:
+---
 
-Feature,	Status,	Dependency,	Remarks
+#### Input & Output: USB
 
-Full Graphics Accleration (QE/CI)
+- **Temporary USB Setup**: Use `USBInjectAll.kext` to enable USB for setup.
+  - [Read More](https://github.com/daliansky/OS-X-USB-Inject-All)
+  
+- **Permanent Mapping**:
+  - Use `USBToolBox` (recommended) or `USBMap.kext` to generate mappings.
+  
+| **USB Configuration** | **Details**                                                                     |
+|------------------------|---------------------------------------------------------------------------------|
+| Unsupported XHCI Ports | X99: 8086:8D31 <br> 200: 8086:A2AF (macOS) <br> 300: 8086:A36D/8086:9DED        |
+|                        | 400: 8086:A3AF <br> 500: 8086:43ED                                              |
 
-✅	No kext needed if using MacPro 7,1 SMBIOS
+#### Thunderbolt
 
-Audio Recording via 3.5mm microphone
-✅	VoodooHDA.kext	
+To enable **Hot Plug**, use SSDTs created by CaseySJ.
 
-Audio Playback after through 3.5mm
-✅	VoodooHDA.kext	
+---
 
-Automatic Headphone Output Switching
-✅	VoodooHDA.kext	
+#### Display
 
-ACPI Customizations:
+| **Feature**         | **Status** | **Dependency** | **Remarks**                               |
+|----------------------|------------|-----------------|-------------------------------------------|
+| HiDPI Support        | ✅         | None            | Enabled natively for UHD DP screens       |
 
-Use SSDTTime to create your custom SSDTs
+---
 
-Power, Charge, Sleep and Hibernation:
+### Reference Links
 
-Use CPUFriend kexts for advanced CPU Power Management
-CPU Power Management (SpeedShift)
+- [Dortania OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/)
+- [Daliansky's OC-little Repository](https://github.com/daliansky/OC-little)
 
-CPU	✅	SSDT-PLUG	or Use SSDTTime to create your custom SSDT Plug kext
+---
 
-S3 Sleep / Hibernation Mode 3
+### Bootloader
 
-S3  / Mode 3 	✅		
+- **Bootloader**: OpenCore / Clover (Latest Versions)
+- **Triple Booting**: Windows 11, macOS 26, and PearOS NiceC0re 26.4.
+  - **Bootloader Chain**: Use `rEFInd` to chainload Windows and PearOS, and select between OpenCore or Clover.
 
-Input & Output:
+---
 
-USB:
-USB： USB2.0 x1 USB3.0 x1 USBinjectAll.kext to temporarily enable USB to set up
+### Requirements
 
-Readme https://github.com/daliansky/OS-X-USB-Inject-All
+#### Basic Tools
 
-USB kexts:
+- macOS machine (optional): To create the macOS installer and build the EFI.
+- Flash drive (16GB+).
+- **Tools for Editing**:
+  - Plist: [PlistEDPlus](https://github.com) (Windows)
+  - Plist: ProperTree [(Windows/macOS)](https://github.com/corpnewt/ProperTree)
+  - ACPI: [MaciASL](https://github.com)
+  - Diagnosis: HackinTool (Diagnostics ONLY).
+- **Time & Patience**
 
-Use USBToolBox (Windows preferably) or USBMap.kext to generate your USB mapping
+#### Hardware Modifications
 
-XHCI-unsupported.kext
+- **SSD**: Avoid Samsung PM981 (unsupported).
+- **Wireless Card**:
+  - Best: Broadcom Wireless Card.
+  - Alternative: Intel AX210 + `itlwm.kext` + `Heliport` (Disable **AppleVTD** in BIOS).
+  
+---
 
-X99，8086:8d31
+### BIOS Settings Checklist
 
-200，8086:a2af（macOS)
+1. **System Agent Configuration**:
+   - VT-D: Enable for Broadcom WiFi/BT; Disable for Intel AX210.
+   - Above 4G Decoding: Enable.
+2. **USB**: Enable XHCI Hand-off.
+3. **Boot Settings**:
+   - Compatibility Support Module (CSM): Disabled.
+   - Secure Boot: OS Type: **Other OS**.
+   - Wait for 'F1' If Error: Disabled.
 
-300 XHC，8086:a36d 8086:9ded
+---
 
-400 XHC，8086:a3af
+### Dual Boot: Windows Edits
 
-500 XHC，8086:43ed
+Add the following registry entry to Windows 11 to fix clock disruptions:
 
-Thunderbolt: To enable Hot Plug use SSDTs created by CaseySJ
-
-Display:
-
-Feature,	Status,	Dependency,	Remarks
-
-HiDPI	✅		Natively enabled on UHD DP screen external
-
-UHD DP 4K
-
-Reference:
-
-dortania's OpenCore Install Guide
-
-daliansky/OC-little
-
-Bootloader: OpenCore / Clover latest version. Triple Booting Windows 11, macOS 26 and pearOS NiceC0re 26.4. Using rEFInd chainload to boot Windows and pearOS and select from OpenCore or Clover
-
-Requirement:
-
-Basic
-
-A macOS machine (optional): to create the macOS installer and build the EFI. 
-
-Flash drive, 16GB or more, for the above purpose. 
-
-PlistEDPlus to edit plist files on Windows.
-
-ProperTree to edit plist files on Windows/macOS.
-
-MaciASL for patching ACPI tables and editing ACPI patches.
-
-HackinTool for diagnosis ONLY. 
-
-Patience and time, especially if this is your first time Hackintosh-ing. 
-
-Hardware Modification:
-
-SSD
-
-Avoid Samusung PM981 as it is not supported AT ALL. 
-
-Wireless Card:
-
-it is recommended to use Broadcom wireless network card for the best experience (better, refer to the use of the best experience).
-Alternatively, use Intel AX210 with itlwm kext + Heliport with AppleVTD disabled in BIOS
-
-BIOS Settings:
-
-Settings > Advanced > System Agent (SA) Configuration > VT-D: Enabled if using Broadcom wifi+BT card / Disabled if using Intel AX210
-
-Settings > Advanced > System Agent (SA) Configuration > Above 4G Decoding: Enabled
-
-Settings > Advanced > USB Configuration > XHCI Hand-off: Enabled
-
-Settings > Boot > CSM(Compatibility Support Module) > Launch CSM: Disabled
-
-Settings > Boot > Secure Boot > OS Type: Other OS
-
-Settings > Boot > Boot\Boot Configuration > Wait For 'F1' If Error: Disabled
-
-Win+Mac
-
-Windows Edits:
-
-To fix clock time disruptions add the following registry entry in Windows 11:
-
+```bash
 Reg add HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation /v RealTimeIsUniversal /t REG_DWORD /d 1
-
-Ctrl + Enter 
+```
