@@ -215,4 +215,4 @@ Reg add HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation /v RealTimeIsU
 - **Major Hackintosh Communities**:
   - [r/Hackintosh on Reddit](https://www.reddit.com/r/hackintosh/)
   - [Hackintosh Discord servers](https://discord.com/invite/u8V7N5C)
-  - InsanelyMac and AppleLife forums.
+  - InsanelyMac, tonymacx86 and AppleLife forums.
