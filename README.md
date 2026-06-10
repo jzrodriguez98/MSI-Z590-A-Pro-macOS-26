@@ -210,7 +210,7 @@ Reg add HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation /v RealTimeIsU
 - [5T33Z0](https://github.com/5T33Z0)
 - [daliansky](https://github.com/daliansky)
 - [scytdtf](https://github.com/scytdtf)
-- [maldon](https://olarila.com)
+- [MaLd0n](https://olarila.com)
 
 #### Community Acknowledgments
 - **Major Hackintosh Communities**:
