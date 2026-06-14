@@ -132,13 +132,13 @@ Add bootarg e1000=0 in NVRAM section of EFI OpenCore config file and enable Appl
 
 | **Kext**                              | **Description**                                | **Link**                                                       |
 |---------------------------------------|------------------------------------------------|-----------------------------------------------------------------|
-| Lilu.kext                             | Kernel extension necessary for macOS support  | [Lilu](https://github.com/acidanthera/Lilu)                   |
+| Lilu.kext                             | Kernel extension necessary for macOS support  | [Lilu](https://github.com/acidanthera/Lilu)                    |
 | VirtualSMC.kext                       | Core SMC emulation                            | [VirtualSMC](https://github.com/acidanthera/VirtualSMC)        |
-| SMCProcessor.kext                     | Used for CPU monitoring (Desktop builds)      | [SMCProcessor](https://github.com/acidanthera/VirtualSMC)     |
-| SMCSuperIO.kext                       | Used for SuperIO monitoring                   | [SMCSuperIO](https://github.com/acidanthera/VirtualSMC)       |
+| SMCProcessor.kext                     | Used for CPU monitoring (Desktop builds)      | [SMCProcessor](https://github.com/acidanthera/VirtualSMC)      |
+| SMCSuperIO.kext                       | Used for SuperIO monitoring                   | [SMCSuperIO](https://github.com/acidanthera/VirtualSMC)        |
 | AMDRadeonSensor.kext                  | Enables AMD GPU sensors                       | [AMDRadeonSensor](https://github.com/ChefKissInc/SMCRadeonSensors) |
 | RestrictedEvents.kext                 | Security improvements for macOS              | [RestrictedEvents](https://github.com/acidanthera/RestrictEvents) |
-| NVMeFix.kext                          | Fixes NVMe incompatibility issues in macOS    | [NVMeFix](https://github.com/acidanthera/NVMeFix)             |
+| NVMeFix.kext                          | Fixes NVMe incompatibility issues in macOS    | [NVMeFix](https://github.com/acidanthera/NVMeFix)              |
 | HibernationFixup.kext                 | Enables hibernation support                   | [HibernationFixup](https://github.com/acidanthera/HibernationFixup) |
 | AppleBCMWLANCompanion.kext            | Broadcom Wireless peripheral support          | [AppleBCMWLAN](https://github.com/0xFireWolf/AppleBCMWLANCompanion) |
 | VoodooHDA.kext            | Kext for Intel macOS Audio codec support (required in macOS 26 if you want audio without relaxing too much SIP)          | [VoodooHDA](https://github.com/CloverHackyColor/VoodooHDA) |
@@ -148,7 +148,7 @@ Add bootarg e1000=0 in NVRAM section of EFI OpenCore config file and enable Appl
 ### Optional Kexts
 
 | **Kext**                              | **Description**                                | **Link**                                                       |
-|---------------------------------------|------------------------------------------------|-----------------------------------------------------------------|
+|---------------------------------------|------------------------------------------------|----------------------------------------------------------------|
 | AdvancedMap.kext                     | Lilu plugin providing modern maps on non-Apple Silicon hardware      | [AdvancedMap](https://github.com/notjosh/AdvancedMap) |       
 | itlwm.kext                     | Lilu  plugin enabling WiFi functionality for Intel WiFi cards. Use Heliport as WiFi client      | [itlwm](https://github.com/OpenIntelWireless/itlwm) |       
 | IntelBluetoothFirmware.kext                     | Lilu  plugin enabling WiFi functionality for Intel WiFi cards. Use Heliport as WiFi client      | [IntelBluetoothFirmware](https://github.com/O[...]
@@ -173,13 +173,22 @@ Add bootarg e1000=0 in NVRAM section of EFI OpenCore config file and enable Appl
 ### BIOS Settings Checklist
 
 1. **System Agent Configuration**:
-   - VT-D: Enable for Broadcom WiFi/BT; Disable for Intel AX210.
-   - Above 4G Decoding: Enable.
-2. **USB**: Enable XHCI Hand-off.
+   - VT-D: Enabled for Broadcom WiFi/BT; Disabled for Intel AX210
+   - SEttings \ Advanced \ Above 4G Decoding: Enabled
+   - Settings \ Advanced \ Integrated Peripherals → Network Stack: Disabled
+   - Settings \ Advanced \ Integrated Peripherals → Intel Serial IO: Disabled
+   - Settings \ Advanced \ USB Configuration → XHCI Hand-off: Enabled
+   - Settings \ Advanced \ USB Configuration → Legacy USB Support: Auto
+   - Settings \ Advanced \ Windows OS Configuration → MSI Fast Boot: Disabled
+   - Settings \ Advanced \ Windows OS Configuration → Fast Boot: Disabled
+   - Overclocking → Extreme Memory Profile(X.M.P): Enabled unless your build starts freezing / does not like it
+   - Overclocking \ CPU Features → Intel Virtualization Tech: Enabled
+2. **USB**: Enable XHCI Hand-off
 3. **Boot Settings**:
-   - Compatibility Support Module (CSM): Disabled.
-   - Secure Boot: OS Type: **Other OS**.
-   - Wait for 'F1' If Error: Disabled.
+   - Compatibility Support Module (CSM): Disabled
+   - Secure Boot: Disabled
+   - OS Type: **Other OS**
+   - Wait for 'F1' If Error: Disabled
 
 ---
 
