@@ -95,6 +95,12 @@ To enable **Hot Plug**, use SSDTs created by CaseySJ (https://www.tonymacx86.com
 
 ---
 
+#### Ethernet
+
+Add bootarg e1000=0 in NVRAM section of EFI OpenCore config file and enable AppleVTD to be able to have native ethernet support
+
+---
+
 #### Display
 
 | **Feature**         | **Status** | **Dependency** | **Remarks**                               |
