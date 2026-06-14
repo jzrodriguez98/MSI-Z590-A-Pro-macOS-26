@@ -1,6 +1,6 @@
 ## MSI Z590-A Pro macOS 26 Configuration
 
-### Hardware Specifications
+### System Overview and Hardware Specifications
 
 | **Component**         | **Details**                                                                                   |
 |------------------------|-----------------------------------------------------------------------------------------------|
@@ -63,7 +63,7 @@ sudo kextload /Library/Extensions/VoodooHDA.kext
 
 #### ACPI Customizations
 
-- Use [`SSDTTime`](https://github.com/corpnewt/SSDTTime) to create your custom SSDTs.
+- Custom SSDT/DSDT patches applied. Use [`SSDTTime`](https://github.com/corpnewt/SSDTTime) to create your custom SSDTs.
 
 ---
 
