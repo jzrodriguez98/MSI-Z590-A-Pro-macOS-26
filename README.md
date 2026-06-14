@@ -10,9 +10,12 @@
 | **NVMe SSD**          | Crucial P3 PCIe Gen3 NVMe 500GB – CT500P3SSD8      |
 | **Discrete Graphics** | AMD RX 6600 Armor 8 GB                                                                        |
 | **Wireless Card**     | BCM943602CS (using [`AppleBCMWLANCompanion.kext`](https://github.com/0xFireWolf/AppleBCMWLANCompanion))|
+|
+| **Ethernet NIC**     | I225-V 2.5G Ethernet Controller      |
+|
 | **Thunderbolt**       | THUNDERBOLTM4 8K (Thunderbolt 4 PCIe Expansion Card)                                          |
 | **SMBIOS**            | Use MacPro 7,1                                                                                |
-
+|
 ---
 
 ### Feature Overview
