@@ -111,7 +111,7 @@ Add bootarg e1000=0 in NVRAM section of EFI OpenCore config file and enable Appl
 
 ### Reference Links
 
-- [Dortania OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/)
+- [Dortania OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/) - refer to Comet Lake settings section of Dortania Guide for specific settings applicable to this CPU generation
 - [Daliansky's OC-little Repository](https://github.com/daliansky/OC-little)
 - [OC-little Translated](https://github.com/5T33Z0/OC-Little-Translated)
 - [Clover Guide](https://github.com/5T33Z0/Clover-Crate)
