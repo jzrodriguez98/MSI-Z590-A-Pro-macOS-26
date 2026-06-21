@@ -1,0 +1,58 @@
+SSDT  HACK  THB4RP21    INTL%	  I \/_SB_PC00RP21 \/_SB_PC00RP21HRUS \/_SB_PC00RP21PXSX \DTGPhijkq`\u0060\u0060[ K$DSB0_ADR [A1E0 
+@[+A1E0AVND BMIE M	PRIBSECBSUBB  MABT_PRW 
+i
+_BBN SECB	_STA 
+_RMV  E_DSMp?AAPL,slot-name 
+	Built-In built-in  PCI-Thunderbolt `DTGPhijkq``[K$DSB0_ADR [A1E0 
+@[+A1E0AVND BMIE M	PRIBSECBSUBB  MABT	_STA 
+_RMV  _PRW 
+i
+_BBN SECBH_DSMpBAAPL,slot-name 
+	Built-In built-in  PCIHotplugCapable  `DTGPhijkq``[ONHI0_ADR _STR
+T h u n d e r b o l t   	_STA 
+_PRW 
+i
+_RMV  O_DSMpIclass-code 
+  device-id 
+  AAPL,slot-name 
+	Built-In name .
++Intel Maple Ridge Thunderbolt 4 Controller model /
+,Intel JHL8540 Maple Ridge Thunderbolt 4 NHI TBTFlags 
+   device_type 
+Thunderbolt 4 Controller linkDetails 
+      power-save  `DTGPhijkq``[EDSB1_ADR   [A1E0 
+@[+A1E0AVND BMIE M	PRIBSECBSUBB  MABT_PRW 
+i
+_BBN SECB	_STA 
+_RMV  [D:DSB2_ADR   [A1E0 
+@[+A1E0AVND BMIE M	PRIBSECBSUBB  MABT_PRW 
+i
+_BBN SECB	_STA 
+_RMV  [M2XHC3_ADR 	_STA 
+_RMV  F_DSMp@AAPL,slot-name 
+	Built-In built-in  name %
+"Intel Maple Ridge USB4 Controller model -
+*Intel JHL8540 Maple Ridge USB4 Controller device_type "
+USB eXtensible Host Controller AAPL,current-available 4AAPL,current-extra 
+AAPL,current-in-sleep 
+AAPL,max-port-current-in-sleep 4AAPL,device-internal  AAPL,root-hub-depth 
+AAPL,XHC-clock-id `DTGPhijkq``_PRW 
+i
+[FRHUB_ADR _RMV  [9HS01_ADR_UPC
+	  _PLD
+      1          [:HS02_ADR
+_UPC
+	  _PLD
+      1          [BSSP1_ADR
+_UPC
+	  _PLD
+      1          6_DSM	j $UsbCPortNumber UsbPowerSource [DSSP2_ADR
+_UPC
+	  _PLD
+      1          8_DSM	j &UsbCPortNumber 
+UsbPowerSource 
+[EDSB3_ADR   [A1E0 
+@[+A1E0AVND BMIE M	PRIBSECBSUBB  MABT_PRW 
+i
+_BBN SECB	_STA 
+_RMV  
