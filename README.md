@@ -14,7 +14,7 @@
 | **Thunderbolt**       | THUNDERBOLTM4 8K (Thunderbolt 4 PCIe Expansion Card)                                                                        |
 | **SMBIOS**            | MacPro 7,1|  |
 |
-| **macOS version**            | 26.5.1 (26.5.2 update was not good for the AppleBCMWLANCompanion kext which when enabled is not allowing me to load macOS - reported to drveloper in GitHub)|  
+| **macOS version**            | 26.5.1 (26.5.2 update was not good for the AppleBCMWLANCompanion kext which when enabled is not allowing me to load macOS - reported to developer in GitHub)|  |
 |---
 
 ### Feature Overview
