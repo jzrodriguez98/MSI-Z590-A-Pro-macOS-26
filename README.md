@@ -1,4 +1,4 @@
-## MSI Z590-A Pro macOS 26 Configuration
+## MSI Z590-A Pro macOS 26.5.1 Configuration
 
 ### System Overview and Hardware Specifications
 
