@@ -15,6 +15,82 @@
 | **SMBIOS**            | MacPro 7,1                               |
 | **macOS version**       | 26.5.1 (26.5.2 update was not good for the AppleBCMWLANCompanion kext which when enabled is not allowing me to load macOS - reported to developer in GitHub)                                                                        |                                      |
 
+## Requirement
+
+### Basic
+
+- A macOS machine (optional): to create the macOS installer and build the EFI.
+- Flash drive, 16GB or more, for the above purpose.
+- [PlistEDPlus](https://github.com/ic005k/PlistEDPlus) to edit plist files on Windows.
+- [ProperTree](https://github.com/corpnewt/ProperTree) to edit plist files on Windows/macOS.
+- [MaciASL](https://github.com/acidanthera/MaciASL) for patching ACPI tables and editing ACPI patches.
+- [HackinTool](https://github.com/headkaze/Hackintool) for diagnosis ONLY. Most of the built-in patches are outdated.
+
+
+---
+
+### BIOS Settings Checklist
+
+1. **System Agent Configuration**:
+   - VT-D: Enabled for Broadcom WiFi/BT; Disabled for Intel AX210
+   - SEttings \ Advanced \ Above 4G Decoding: Enabled
+   - Settings \ Advanced \ Integrated Peripherals → Network Stack: Disabled
+   - Settings \ Advanced \ Integrated Peripherals → Intel Serial IO: Disabled
+   - Settings \ Advanced \ USB Configuration → XHCI Hand-off: Enabled
+   - Settings \ Advanced \ USB Configuration → Legacy USB Support: Auto
+   - Settings \ Advanced \ Windows OS Configuration → MSI Fast Boot: Disabled
+   - Settings \ Advanced \ Windows OS Configuration → Fast Boot: Disabled
+   - Overclocking → Extreme Memory Profile(X.M.P): Enabled unless your build starts freezing / does not like it
+   - Overclocking \ CPU Features → Intel Virtualization Tech: Enabled
+2. **USB**: Enable XHCI Hand-off
+3. **Boot Settings**:
+   - Compatibility Support Module (CSM): Disabled
+   - Secure Boot: Disabled
+   - OS Type: **Other OS**
+   - Wait for 'F1' If Error: Disabled
+
+---
+
+### Dual Boot: Windows Edits
+
+Add the following registry entry to Windows 11 to fix clock disruptions:
+
+```bash
+Reg add HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation /v RealTimeIsUniversal /t REG_DWORD /d 1
+```
+
+---
+
+### Mandatory Kexts
+
+| **Kext**                              | **Description**                                | **Link**                                                       |
+|---------------------------------------|------------------------------------------------|-----------------------------------------------------------------|
+| Lilu.kext                             | Kernel extension necessary for macOS support  | [Lilu](https://github.com/acidanthera/Lilu)                    |
+| VirtualSMC.kext                       | Core SMC emulation                            | [VirtualSMC](https://github.com/acidanthera/VirtualSMC)        |
+| SMCProcessor.kext                     | Used for CPU monitoring (Desktop builds)      | [SMCProcessor](https://github.com/acidanthera/VirtualSMC)      |
+| SMCSuperIO.kext                       | Used for SuperIO monitoring                   | [SMCSuperIO](https://github.com/acidanthera/VirtualSMC)        |
+| AMDRadeonSensor.kext                  | Enables AMD GPU sensors                       | [AMDRadeonSensor](https://github.com/ChefKissInc/SMCRadeonSensors) |
+| RestrictedEvents.kext                 | Security improvements for macOS              | [RestrictedEvents](https://github.com/acidanthera/RestrictEvents) |
+| NVMeFix.kext                          | Fixes NVMe incompatibility issues in macOS    | [NVMeFix](https://github.com/acidanthera/NVMeFix)              |
+| HibernationFixup.kext                 | Enables hibernation support                   | [HibernationFixup](https://github.com/acidanthera/HibernationFixup) |
+| AppleBCMWLANCompanion.kext            | Broadcom Wireless peripheral support          | [AppleBCMWLAN](https://github.com/0xFireWolf/AppleBCMWLANCompanion) |
+| VoodooHDA.kext            | Kext for Intel macOS Audio codec support (required in macOS 26 if you want audio without relaxing too much SIP)          | [VoodooHDA](https://github.com/SongXiaoXi/AppleIGC) |
+
+---
+
+### Optional Kexts
+
+| **Kext**                              | **Description**                                | **Link**                                                       |
+|---------------------------------------|------------------------------------------------|----------------------------------------------------------------|
+| AdvancedMap.kext                     | Lilu plugin providing modern maps on non-Apple Silicon hardware      | [AdvancedMap](https://github.com/notjosh/AdvancedMap) |       
+| itlwm.kext                     | Lilu  plugin enabling WiFi functionality for Intel WiFi cards. To use itlwm in combination with AppleIGC I disable AppleVTD which can be done in UEFI BIOS or in the config.plist kernel quirks section (refer to Dortania Comet Lake Deaktop guide for more details). Using perez987 fork of Heliport as WiFi client      | [itlwm](https://github.com/OpenIntelWireless/itlwm) [Heliport](https://github.com/perez987/HeliPort)|       
+| IntelBluetoothFirmware.kext                     | Lilu  plugin enabling Bluetooth functionality for Intel WiFi cards. Using Vinhts fork as it supports LE devices much better      | [IntelBluetoothFirmware](https://github.com/Vinhts/IntelBluetoothFirmware) |
+| HDAUniversal.kext                     | Modern AppleHDA-like audio kernel extension for macOS and Hackintosh systems, created to deliver clean, stable, and natural onboard audio with a behavior closer to Apple’s native audio stack.      | [HDAUniversal](https://www.insanelymac.com/forum/topic/362932-hdauniversal-applehda-like-audio-kext-for-macos-tahoe-and-hackintosh-systems/) |
+| AppleIGC.kext                     | Lilu plugin kerner extension enabling Ethernet functionality for Intel I-225V / I-226V chips.      | [AppleIGC](https://www.insanelymac.com/forum/topic/362932-hdauniversal-applehda-like-audio-kext-for-macos-tahoe-and-hackintosh-systems/) |
+
+
+---
+
 ### Feature Overview
 
 #### Video and Audio
@@ -158,81 +234,6 @@ I can also use AppleIGC kext with AppleVTD disabled
 
 ---
 
-### Mandatory Kexts
-
-| **Kext**                              | **Description**                                | **Link**                                                       |
-|---------------------------------------|------------------------------------------------|-----------------------------------------------------------------|
-| Lilu.kext                             | Kernel extension necessary for macOS support  | [Lilu](https://github.com/acidanthera/Lilu)                    |
-| VirtualSMC.kext                       | Core SMC emulation                            | [VirtualSMC](https://github.com/acidanthera/VirtualSMC)        |
-| SMCProcessor.kext                     | Used for CPU monitoring (Desktop builds)      | [SMCProcessor](https://github.com/acidanthera/VirtualSMC)      |
-| SMCSuperIO.kext                       | Used for SuperIO monitoring                   | [SMCSuperIO](https://github.com/acidanthera/VirtualSMC)        |
-| AMDRadeonSensor.kext                  | Enables AMD GPU sensors                       | [AMDRadeonSensor](https://github.com/ChefKissInc/SMCRadeonSensors) |
-| RestrictedEvents.kext                 | Security improvements for macOS              | [RestrictedEvents](https://github.com/acidanthera/RestrictEvents) |
-| NVMeFix.kext                          | Fixes NVMe incompatibility issues in macOS    | [NVMeFix](https://github.com/acidanthera/NVMeFix)              |
-| HibernationFixup.kext                 | Enables hibernation support                   | [HibernationFixup](https://github.com/acidanthera/HibernationFixup) |
-| AppleBCMWLANCompanion.kext            | Broadcom Wireless peripheral support          | [AppleBCMWLAN](https://github.com/0xFireWolf/AppleBCMWLANCompanion) |
-| VoodooHDA.kext            | Kext for Intel macOS Audio codec support (required in macOS 26 if you want audio without relaxing too much SIP)          | [VoodooHDA](https://github.com/SongXiaoXi/AppleIGC) |
-
----
-
-### Optional Kexts
-
-| **Kext**                              | **Description**                                | **Link**                                                       |
-|---------------------------------------|------------------------------------------------|----------------------------------------------------------------|
-| AdvancedMap.kext                     | Lilu plugin providing modern maps on non-Apple Silicon hardware      | [AdvancedMap](https://github.com/notjosh/AdvancedMap) |       
-| itlwm.kext                     | Lilu  plugin enabling WiFi functionality for Intel WiFi cards. To use itlwm in combination with AppleIGC I disable AppleVTD which can be done in UEFI BIOS or in the config.plist kernel quirks section (refer to Dortania Comet Lake Deaktop guide for more details). Using perez987 fork of Heliport as WiFi client      | [itlwm](https://github.com/OpenIntelWireless/itlwm) [Heliport](https://github.com/perez987/HeliPort)|       
-| IntelBluetoothFirmware.kext                     | Lilu  plugin enabling Bluetooth functionality for Intel WiFi cards. Using Vinhts fork as it supports LE devices much better      | [IntelBluetoothFirmware](https://github.com/Vinhts/IntelBluetoothFirmware) |
-| HDAUniversal.kext                     | Modern AppleHDA-like audio kernel extension for macOS and Hackintosh systems, created to deliver clean, stable, and natural onboard audio with a behavior closer to Apple’s native audio stack.      | [HDAUniversal](https://www.insanelymac.com/forum/topic/362932-hdauniversal-applehda-like-audio-kext-for-macos-tahoe-and-hackintosh-systems/) |
-| AppleIGC.kext                     | Lilu plugin kerner extension enabling Ethernet functionality for Intel I-225V / I-226V chips.      | [AppleIGC](https://www.insanelymac.com/forum/topic/362932-hdauniversal-applehda-like-audio-kext-for-macos-tahoe-and-hackintosh-systems/) |
-
-
----
-
-## Requirement
-
-### Basic
-
-- A macOS machine (optional): to create the macOS installer and build the EFI.
-- Flash drive, 16GB or more, for the above purpose.
-- [PlistEDPlus](https://github.com/ic005k/PlistEDPlus) to edit plist files on Windows.
-- [ProperTree](https://github.com/corpnewt/ProperTree) to edit plist files on Windows/macOS.
-- [MaciASL](https://github.com/acidanthera/MaciASL) for patching ACPI tables and editing ACPI patches.
-- [HackinTool](https://github.com/headkaze/Hackintool) for diagnosis ONLY. Most of the built-in patches are outdated.
-
-
----
-
-### BIOS Settings Checklist
-
-1. **System Agent Configuration**:
-   - VT-D: Enabled for Broadcom WiFi/BT; Disabled for Intel AX210
-   - SEttings \ Advanced \ Above 4G Decoding: Enabled
-   - Settings \ Advanced \ Integrated Peripherals → Network Stack: Disabled
-   - Settings \ Advanced \ Integrated Peripherals → Intel Serial IO: Disabled
-   - Settings \ Advanced \ USB Configuration → XHCI Hand-off: Enabled
-   - Settings \ Advanced \ USB Configuration → Legacy USB Support: Auto
-   - Settings \ Advanced \ Windows OS Configuration → MSI Fast Boot: Disabled
-   - Settings \ Advanced \ Windows OS Configuration → Fast Boot: Disabled
-   - Overclocking → Extreme Memory Profile(X.M.P): Enabled unless your build starts freezing / does not like it
-   - Overclocking \ CPU Features → Intel Virtualization Tech: Enabled
-2. **USB**: Enable XHCI Hand-off
-3. **Boot Settings**:
-   - Compatibility Support Module (CSM): Disabled
-   - Secure Boot: Disabled
-   - OS Type: **Other OS**
-   - Wait for 'F1' If Error: Disabled
-
----
-
-### Dual Boot: Windows Edits
-
-Add the following registry entry to Windows 11 to fix clock disruptions:
-
-```bash
-Reg add HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation /v RealTimeIsUniversal /t REG_DWORD /d 1
-```
-
----
 
 ### Credits
 
