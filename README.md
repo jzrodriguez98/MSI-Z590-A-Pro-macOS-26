@@ -127,6 +127,8 @@ To enable **Hot Plug**, use SSDTs created by CaseySJ (https://www.tonymacx86.com
 
 Add bootarg e1000=0 in NVRAM section of EFI OpenCore config file and enable AppleVTD to be able to have native ethernet support
 
+I can also use AppleIGC kext with AppleVTD disabled
+
 ---
 
 #### Display
@@ -181,6 +183,7 @@ Add bootarg e1000=0 in NVRAM section of EFI OpenCore config file and enable Appl
 | itlwm.kext                     | Lilu  plugin enabling WiFi functionality for Intel WiFi cards. Using perez987 fork of Heliport as WiFi client      | [itlwm](https://github.com/OpenIntelWireless/itlwm) [Heliport](https://github.com/perez987/HeliPort)|       
 | IntelBluetoothFirmware.kext                     | Lilu  plugin enabling Bluetooth functionality for Intel WiFi cards. Using Vinhts fork as it supports LE devices much better      | [IntelBluetoothFirmware](https://github.com/Vinhts/IntelBluetoothFirmware) |
 | HDAUniversal.kext                     | Modern AppleHDA-like audio kernel extension for macOS and Hackintosh systems, created to deliver clean, stable, and natural onboard audio with a behavior closer to Apple’s native audio stack.      | [HDAUniversal](https://www.insanelymac.com/forum/topic/362932-hdauniversal-applehda-like-audio-kext-for-macos-tahoe-and-hackintosh-systems/) |
+| AppleIGC.kext                     | Lilu plugin kerner extension enabling Ethernet functionality for Intel I-225V / I-226V chips.      | [AppleIGC](https://www.insanelymac.com/forum/topic/362932-hdauniversal-applehda-like-audio-kext-for-macos-tahoe-and-hackintosh-systems/) |
 
 
 ---
