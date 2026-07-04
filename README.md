@@ -263,7 +263,7 @@ I can also use AppleIGC kext with AppleVTD disabled
 - [perez987](https://github.com/perez987)
 - [SongXiaoXi](https://github.com/SongXiaoXi)
 - [alex - pearOS NiceC0re Arch Linux distro developer](https://github.com/pearOS-archlinux)
-- [dakanji - authors of rEFInd Plus repo](https://github.com/dakanji)
+- [dakanji - author of rEFInd Plus repo](https://github.com/dakanji)
 
 #### Community Acknowledgments
 - **Major Hackintosh Communities**:
