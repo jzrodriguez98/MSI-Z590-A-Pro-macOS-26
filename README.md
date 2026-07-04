@@ -61,6 +61,34 @@ sudo kextutil -v /Library/Extensions/VoodooHDA.kext
 
 sudo kextload /Library/Extensions/VoodooHDA.kext
 
+HDAUniversal kext installation (as explained in insanelymac community thread)
+
+1- Remove VoodooHDA, AppleAlc or other and inject bootarg alcid=xx or Device Properties. Check Instructions HERE
+2- Run the .pkg installer, then open System Settings > Privacy & Security and allow the HDAUniversal kernel extension if macOS asks for permission.
+Example: In my ALC897 I can use alcid=69 or defining the layout-id in Device Properties and HDAUniversal.kext, only that.
+Why HDAUniversal Must Be Installed in /Library/Extensions
+HDAUniversal is designed to work as a system-installed macOS audio kext, not as a simple bootloader-injected kext.
+For this first release, the correct and supported installation path is:
+/Library/Extensions/HDAUniversal.kext
+This requirement is intentional.
+Unlike small helper kexts that can usually be injected from EFI, HDAUniversal publishes real IOAudio devices, IOAudio engines, selectors, controls, volume ranges, mute controls, input/output sources, and AppleHDA-like audio endpoints. These objects are used not only by the kernel, but also by macOS user-space audio services such as CoreAudio, Sound Settings, Audio MIDI Setup, Control Center, and coreaudiod.
+Installing the kext in /Library/Extensions gives macOS a proper on-disk bundle with the expected structure, metadata, permissions, cache handling, and resource visibility. This is important for stable audio registration, correct IOAudio behavior, system audio discovery, sleep/wake lifecycle, and future localization or UI-related metadata.
+Loading HDAUniversal only from EFI may load the binary, but it can produce incomplete or inconsistent behavior because macOS may not treat the kext as a fully installed audio bundle. In that case, CoreAudio and the system UI may not reliably see all metadata, resources, localized names, or audio endpoint information the same way they do when the kext is installed properly in /Library/Extensions.
+For this reason, EFI injection is not supported for the first public release.
+Supported Installation Method
+
+Install HDAUniversal here:
+/Library/Extensions/HDAUniversal.kext
+Then rebuild the kext cache / kernel collection and reboot.
+Not Supported
+
+EFI/OC/Kexts/HDAUniversal.kext
+EFI/CLOVER/kexts/Other/HDAUniversal.kext
+Temporary manual loading
+Mixed copies in EFI and /Library/Extensions
+Only one copy of HDAUniversal should be present on the system. Multiple copies can cause duplicate matching, wrong versions being loaded, broken audio registration, or inconsistent behavior after reboot or sleep/wake.
+This approach keeps HDAUniversal closer to the way a real macOS audio driver is expected to live in the system and helps provide the most stable AppleHDA-like experience.
+
 #### ACPI Customizations
 
 - Custom SSDT/DSDT patches applied. Use [`SSDTTime`](https://github.com/corpnewt/SSDTTime) to create your custom SSDTs.
