@@ -171,7 +171,7 @@ I can also use AppleIGC kext with AppleVTD disabled
 | NVMeFix.kext                          | Fixes NVMe incompatibility issues in macOS    | [NVMeFix](https://github.com/acidanthera/NVMeFix)              |
 | HibernationFixup.kext                 | Enables hibernation support                   | [HibernationFixup](https://github.com/acidanthera/HibernationFixup) |
 | AppleBCMWLANCompanion.kext            | Broadcom Wireless peripheral support          | [AppleBCMWLAN](https://github.com/0xFireWolf/AppleBCMWLANCompanion) |
-| VoodooHDA.kext            | Kext for Intel macOS Audio codec support (required in macOS 26 if you want audio without relaxing too much SIP)          | [VoodooHDA](https://github.com/CloverHackyColor/VoodooHDA) |
+| VoodooHDA.kext            | Kext for Intel macOS Audio codec support (required in macOS 26 if you want audio without relaxing too much SIP)          | [VoodooHDA](https://github.com/SongXiaoXi/AppleIGC) |
 
 ---
 
