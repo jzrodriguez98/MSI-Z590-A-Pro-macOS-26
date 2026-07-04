@@ -150,7 +150,7 @@ Add bootarg e1000=0 in NVRAM section of EFI OpenCore config file and enable Appl
 | **Kext**                              | **Description**                                | **Link**                                                       |
 |---------------------------------------|------------------------------------------------|----------------------------------------------------------------|
 | AdvancedMap.kext                     | Lilu plugin providing modern maps on non-Apple Silicon hardware      | [AdvancedMap](https://github.com/notjosh/AdvancedMap) |       
-| itlwm.kext                     | Lilu  plugin enabling WiFi functionality for Intel WiFi cards. Using perez987 fork of Heliport as WiFi client      | [itlwm](https://github.com/OpenIntelWireless/itlwm) []()|       
+| itlwm.kext                     | Lilu  plugin enabling WiFi functionality for Intel WiFi cards. Using perez987 fork of Heliport as WiFi client      | [itlwm](https://github.com/OpenIntelWireless/itlwm) [Heliport](https://github.com/perez987/HeliPort)|       
 | IntelBluetoothFirmware.kext                     | Lilu  plugin enabling Bluetooth functionality for Intel WiFi cards. Using Vinhts fork as it supports LE devices much better      | [IntelBluetoothFirmware](https://github.com/Vinhts/IntelBluetoothFirmware) |
 
 
