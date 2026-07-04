@@ -102,7 +102,7 @@ Reg add HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation /v RealTimeIsU
 | Audio Playback via 3.5mm                       | ✅         | `VoodooHDA.kext`            |                                      |
 | Automatic Headphone Output Switching           | ✅         | `VoodooHDA.kext`            |                                      |
 
-VoodooHDA Installation
+#### VoodooHDA Installation
 
 - Exclude other Audio kexts
 - Set SIP disable kext or just
@@ -139,19 +139,28 @@ sudo kextload /Library/Extensions/VoodooHDA.kext
 
 After VoodooHDA.kext loads you can change the csr-active-config to '01000000' in NVRAM section of your config.plist file
 
-HDAUniversal kext installation (as explained in insanelymac community thread)
+#### HDAUniversal kext installation (as explained in insanelymac community thread)
 
 1- Remove VoodooHDA, AppleAlc or other and inject bootarg alcid=xx or Device Properties. Check Instructions HERE
+
 2- Run the .pkg installer, then open System Settings > Privacy & Security and allow the HDAUniversal kernel extension if macOS asks for permission.
+
 Example: In my ALC897 I can use alcid=69 or defining the layout-id in Device Properties and HDAUniversal.kext, only that.
+
 Why HDAUniversal Must Be Installed in /Library/Extensions
+
 HDAUniversal is designed to work as a system-installed macOS audio kext, not as a simple bootloader-injected kext.
+
 For this first release, the correct and supported installation path is:
 /Library/Extensions/HDAUniversal.kext
 This requirement is intentional.
+
 Unlike small helper kexts that can usually be injected from EFI, HDAUniversal publishes real IOAudio devices, IOAudio engines, selectors, controls, volume ranges, mute controls, input/output sources, and AppleHDA-like audio endpoints. These objects are used not only by the kernel, but also by macOS user-space audio services such as CoreAudio, Sound Settings, Audio MIDI Setup, Control Center, and coreaudiod.
+
 Installing the kext in /Library/Extensions gives macOS a proper on-disk bundle with the expected structure, metadata, permissions, cache handling, and resource visibility. This is important for stable audio registration, correct IOAudio behavior, system audio discovery, sleep/wake lifecycle, and future localization or UI-related metadata.
+
 Loading HDAUniversal only from EFI may load the binary, but it can produce incomplete or inconsistent behavior because macOS may not treat the kext as a fully installed audio bundle. In that case, CoreAudio and the system UI may not reliably see all metadata, resources, localized names, or audio endpoint information the same way they do when the kext is installed properly in /Library/Extensions.
+
 For this reason, EFI injection is not supported for the first public release.
 Supported Installation Method
 
@@ -221,7 +230,7 @@ I can also use AppleIGC kext with AppleVTD disabled
 
 ### Reference Links
 
-- [Dortania OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/) - refer to Comet Lake settings section of Dortania Guide for specific settings applicable to this CPU generation
+- [Dortania OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/) - refer to Comet Lake Desktop settings section of Dortania Guide for specific settings applicable to this CPU generation
 - [Daliansky's OC-little Repository](https://github.com/daliansky/OC-little)
 - [OC-little Translated](https://github.com/5T33Z0/OC-Little-Translated)
 - [Clover Guide](https://github.com/5T33Z0/Clover-Crate)
