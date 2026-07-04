@@ -260,6 +260,7 @@ Reg add HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation /v RealTimeIsU
 - [MaLd0n](https://olarila.com)
 - [Vinhts](https://github.com/Vinhts)
 - [perez987](https://github.com/perez987)
+- [SongXiaoXi](https://github.com/SongXiaoXi)
 
 #### Community Acknowledgments
 - **Major Hackintosh Communities**:
