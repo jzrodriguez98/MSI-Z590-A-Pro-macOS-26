@@ -137,6 +137,8 @@ sudo kextutil -v /Library/Extensions/VoodooHDA.kext
 
 sudo kextload /Library/Extensions/VoodooHDA.kext
 
+After VoodooHDA.kext loads you can change the csr-active-config to '01000000' in NVRAM section of your config.plist file
+
 HDAUniversal kext installation (as explained in insanelymac community thread)
 
 1- Remove VoodooHDA, AppleAlc or other and inject bootarg alcid=xx or Device Properties. Check Instructions HERE
@@ -156,14 +158,16 @@ Supported Installation Method
 Install HDAUniversal here:
 /Library/Extensions/HDAUniversal.kext
 Then rebuild the kext cache / kernel collection and reboot.
-Not Supported
 
+Not Supported
 EFI/OC/Kexts/HDAUniversal.kext
 EFI/CLOVER/kexts/Other/HDAUniversal.kext
 Temporary manual loading
 Mixed copies in EFI and /Library/Extensions
 Only one copy of HDAUniversal should be present on the system. Multiple copies can cause duplicate matching, wrong versions being loaded, broken audio registration, or inconsistent behavior after reboot or sleep/wake.
 This approach keeps HDAUniversal closer to the way a real macOS audio driver is expected to live in the system and helps provide the most stable AppleHDA-like experience.
+
+After HDAUniversal.kext loads you can change the csr-active-config to '01000000' in NVRAM section of your config.plist file
 
 #### ACPI Customizations
 
