@@ -152,6 +152,7 @@ Add bootarg e1000=0 in NVRAM section of EFI OpenCore config file and enable Appl
 | AdvancedMap.kext                     | Lilu plugin providing modern maps on non-Apple Silicon hardware      | [AdvancedMap](https://github.com/notjosh/AdvancedMap) |       
 | itlwm.kext                     | Lilu  plugin enabling WiFi functionality for Intel WiFi cards. Using perez987 fork of Heliport as WiFi client      | [itlwm](https://github.com/OpenIntelWireless/itlwm) [Heliport](https://github.com/perez987/HeliPort)|       
 | IntelBluetoothFirmware.kext                     | Lilu  plugin enabling Bluetooth functionality for Intel WiFi cards. Using Vinhts fork as it supports LE devices much better      | [IntelBluetoothFirmware](https://github.com/Vinhts/IntelBluetoothFirmware) |
+| HDAUniversal.kext                     | Modern AppleHDA-like audio kernel extension for macOS and Hackintosh systems, created to deliver clean, stable, and natural onboard audio with a behavior closer to Apple’s native audio stack.      | [HDAUniversal](https://www.insanelymac.com/forum/topic/362932-hdauniversal-applehda-like-audio-kext-for-macos-tahoe-and-hackintosh-systems/) |
 
 
 ---
@@ -227,6 +228,7 @@ Reg add HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation /v RealTimeIsU
 - [scytdtf](https://github.com/scytdtf)
 - [MaLd0n](https://olarila.com)
 - [Vinhts](https://github.com/Vinhts)
+- [perez987](https://github.com/perez987)
 
 #### Community Acknowledgments
 - **Major Hackintosh Communities**:
