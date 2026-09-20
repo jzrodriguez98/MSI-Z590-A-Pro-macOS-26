@@ -283,3 +283,5 @@ I can also use AppleIGC kext with AppleVTD disabled
   - [r/Hackintosh on Reddit](https://www.reddit.com/r/hackintosh/)
   - [Hackintosh Discord servers](https://discord.com/invite/u8V7N5C)
   - InsanelyMac, tonymacx86 and AppleLife forums.
+
+Design provided for educational purposes and specific to the described hardware. Using macOS on non-Apple hardware may violate Apple's licensing terms. Use it at your own risk.
